@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 import { List, X } from "@phosphor-icons/react";
-import logoImg from "../images/KOTA LOOM logo.png";
+import logoImg from "../images/KOTA_LOOM_logo-removebg-preview.png";
 
 const LINKS = [
   { label: "Menu", href: "#menu" },
