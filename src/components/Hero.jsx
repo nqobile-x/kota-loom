@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "motion/react";
 import WovenPattern from "./WovenPattern.jsx";
-import logoImg from "../images/KOTA LOOM logo.png";
+import logoImg from "../images/KOTA_LOOM_logo-removebg-preview.png";
 
 export default function Hero() {
   const reduce = useReducedMotion();
