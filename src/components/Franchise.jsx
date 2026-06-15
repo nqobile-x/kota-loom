@@ -1,6 +1,7 @@
 import Reveal from "./Reveal.jsx";
 import WovenPattern from "./WovenPattern.jsx";
 import { ArrowUpRight } from "@phosphor-icons/react";
+import mascotImg from "../images/Bold_illustrated_character_mascot_for_202606152146.jpeg";
 
 const POINTS = [
   { k: "One method", v: "The loom is the same in every store. Train it once, run it anywhere." },
@@ -33,17 +34,41 @@ export default function Franchise() {
       />
 
       <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-28">
-        <Reveal className="max-w-3xl">
-          <div className="rule-gold mb-6 w-16" />
-          <h2 className="font-display tracking-anton text-5xl text-cream sm:text-6xl md:text-7xl lg:text-8xl">
-            Built For <span className="text-gold">The World</span>
-          </h2>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
-            We started on a Hillbrow corner with one quarter loaf and a method.
-            The method travels. If you want to bring the loom to your city, we
-            are ready to build with you.
-          </p>
-        </Reveal>
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
+            <div className="rule-gold mb-6 w-16" />
+            <h2 className="font-display tracking-anton text-5xl text-cream sm:text-6xl md:text-7xl lg:text-8xl">
+              Built For <span className="text-gold">The World</span>
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
+              We started on a Hillbrow corner with one quarter loaf and a method.
+              The method travels. If you want to bring the loom to your city, we
+              are ready to build with you.
+            </p>
+            <p className="mt-5 font-body text-xl font-light italic text-gold">
+              Be your own loom.
+            </p>
+          </Reveal>
+
+          {/* Vendor mascot -- the face of every corner. */}
+          <Reveal delay={0.1} className="relative">
+            <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden border border-gold/30">
+              <img
+                src={mascotImg}
+                alt="A proud Kota Loom vendor holding up a loaded kota"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(80% 70% at 50% 30%, rgba(212,160,23,0.12), transparent 65%)",
+                }}
+              />
+            </div>
+          </Reveal>
+        </div>
 
         <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden border border-cream/15 bg-cream/15 sm:grid-cols-3">
           {POINTS.map((p, i) => (

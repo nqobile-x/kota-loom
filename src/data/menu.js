@@ -1,7 +1,12 @@
 // Kota Loom menu -- prices in South African Rand, taken from the real menu flyer.
 // `heat` is 0 to 3 (flame indicator). `tag` is an optional badge.
-// To add per-item photography later, add an `image` path field here and
-// uncomment the <img> slot in Menu.jsx (marked TODO).
+// `image` is a real photo of that build; the MenuCard renders it above the copy.
+import imgClassic from "../images/kota loom.jpeg";
+import imgEgg from "../images/a_kasi_kota_and_replace_202606152144.jpeg";
+import imgCheese from "../images/kota loom  pack2.jpeg";
+import imgLoaded from "../images/KOTA LOOM photoshoot.jpeg";
+import imgFullWeave from "../images/Kota loom shoot 3.jpeg";
+
 export const menu = [
   {
     name: "Classic Loom",
@@ -10,6 +15,7 @@ export const menu = [
     heat: 1,
     tag: "Classic",
     fill: ["Chips", "Polony", "Atchaar", "Sauce"],
+    image: imgClassic,
   },
   {
     name: "Egg Loom",
@@ -18,6 +24,7 @@ export const menu = [
     heat: 1,
     tag: null,
     fill: ["Chips", "Egg", "Polony", "Sauce"],
+    image: imgEgg,
   },
   {
     name: "Cheese Loom",
@@ -26,6 +33,7 @@ export const menu = [
     heat: 1,
     tag: null,
     fill: ["Chips", "Polony", "Cheese", "Sauce"],
+    image: imgCheese,
   },
   {
     name: "Loaded Loom",
@@ -34,6 +42,7 @@ export const menu = [
     heat: 2,
     tag: "Bestseller",
     fill: ["Chips", "Russian", "Vienna", "Polony", "Atchaar", "Sauce"],
+    image: imgLoaded,
   },
   {
     name: "Full Weave",
@@ -42,6 +51,7 @@ export const menu = [
     heat: 3,
     tag: "Fully loaded",
     fill: ["Chips", "Russian", "Vienna", "Polony", "Egg", "Cheese", "Lettuce", "Atchaar", "Sauce"],
+    image: imgFullWeave,
   },
 ];
 

@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "motion/react";
 import WovenPattern from "./WovenPattern.jsx";
 import logoImg from "../images/KOTA_LOOM_logo-removebg-preview.png";
+import heroKota from "../images/Kota loop shoot 2.jpeg";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -99,25 +100,35 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Real brand logo lockup. Hidden on small screens. */}
+        {/* Real food hero shot. Hidden on small screens where the type leads. */}
         <motion.div
           variants={item}
           className="hidden justify-center lg:col-span-4 lg:flex"
         >
-          <div className="relative grid h-60 w-60 place-items-center rounded-full border-2 border-gold/40 xl:h-72 xl:w-72">
-            <WovenPattern
-              className="pointer-events-none absolute inset-0 rounded-full"
-              color="#D4A017"
-              opacity={0.22}
-              scale={24}
-            />
-            <div className="absolute inset-4 rounded-full border border-gold/25" />
-            <img
-              src={logoImg}
-              alt="Kota Loom"
-              className="relative h-36 w-36 object-contain xl:h-44 xl:w-44"
-              loading="eager"
-            />
+          <div className="relative w-full max-w-sm">
+            {/* Gold offset frame for a printed-poster feel */}
+            <div className="absolute -inset-3 border border-gold/30" />
+            <div className="relative aspect-[4/5] w-full overflow-hidden border border-gold/40">
+              <img
+                src={heroKota}
+                alt="A loaded Kota Loom, stacked and steaming"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="eager"
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(70% 60% at 50% 0%, rgba(212,160,23,0.18), transparent 60%)",
+                }}
+              />
+              <div className="absolute inset-x-0 bottom-0 flex items-center gap-2 bg-gradient-to-t from-ink/90 to-transparent p-4 pt-10">
+                <img src={logoImg} alt="" aria-hidden="true" className="h-9 w-9 object-contain" />
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cream/85">
+                  Woven to order
+                </span>
+              </div>
+            </div>
           </div>
         </motion.div>
       </motion.div>
