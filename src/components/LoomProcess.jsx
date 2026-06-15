@@ -35,20 +35,33 @@ export default function LoomProcess() {
                 delay: reduce ? 0 : i * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="group relative min-w-[76%] shrink-0 snap-start border border-cream/10 bg-espresso/40 p-6 transition-colors duration-300 hover:border-gold/50 sm:min-w-[42%] md:min-w-0"
+              className="group relative flex min-w-[76%] shrink-0 snap-start flex-col overflow-hidden border border-cream/10 bg-espresso/40 transition-colors duration-300 hover:border-gold/50 sm:min-w-[42%] md:min-w-0"
             >
-              <span className="font-display tracking-anton text-6xl leading-none text-gold transition-colors group-hover:text-gold-bright">
-                {step.n}
-              </span>
-              <h3 className="mt-4 font-display tracking-anton text-2xl text-cream">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-cream/70">
-                {step.desc}
-              </p>
+              {step.image && (
+                <div className="relative aspect-square w-full overflow-hidden">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/20 to-transparent" />
+                  <span className="absolute bottom-2 left-4 font-display tracking-anton text-5xl leading-none text-gold drop-shadow-lg transition-colors group-hover:text-gold-bright">
+                    {step.n}
+                  </span>
+                </div>
+              )}
+              <div className="p-6 pt-4">
+                <h3 className="font-display tracking-anton text-2xl text-cream">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-cream/70">
+                  {step.desc}
+                </p>
+              </div>
               {/* Threaded connector to the next layer (desktop only). */}
               {i < steps.length - 1 && (
-                <span className="pointer-events-none absolute right-[-13px] top-12 hidden h-px w-6 bg-gold/40 lg:block" />
+                <span className="pointer-events-none absolute right-[-13px] top-[25%] z-10 hidden h-px w-6 bg-gold/50 lg:block" />
               )}
             </motion.div>
           ))}
