@@ -4,3 +4,9 @@ dist/
 *.local
 
 .vercel
+
+# Oversized source media kept locally but not shipped.
+# Web-optimized .mp4 + poster .jpg derivatives ARE committed.
+src/videos/*.gif
+src/videos/_frame_*
+src/videos/Hands_exchanging_kota_street_202606160102.mp4
