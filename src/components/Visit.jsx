@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { MapPin, Clock, WhatsappLogo, Phone, CheckCircle } from "@phosphor-icons/react";
 import Reveal from "./Reveal.jsx";
-import BrandVideo from "./BrandVideo.jsx";
-import handsMp4 from "../videos/hands-exchange.mp4";
-import handsPoster from "../videos/hands-exchange-poster.jpg";
 
 // Real, functional contact details for the Hillbrow store.
 const WHATSAPP = "27712345678"; // wa.me format, no +, no spaces
@@ -62,17 +59,6 @@ export default function Visit() {
             Walk up to the corner or send your order ahead. Either way, it gets
             built fresh and wrapped in the weave.
           </p>
-
-          {/* Hand-off at the corner -- order ahead, grab it fresh. */}
-          <div className="relative mt-8 aspect-[16/10] w-full max-w-md overflow-hidden border border-gold/25">
-            <BrandVideo
-              src={handsMp4}
-              poster={handsPoster}
-              alt="A Kota Loom handed over at the corner shop"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
-          </div>
 
           <div className="mt-10 space-y-7">
             <div className="flex gap-4">
