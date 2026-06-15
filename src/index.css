@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/*
+  KOTA LOOM design tokens.
+  Brand palette is explicitly specified by the brief, so it overrides the
+  skill's default palette guards. One dark theme, one gold accent, locked.
+*/
+@theme {
+  --color-ink: #1a1a1a; /* deep matte black - page base */
+  --color-ink-soft: #212121; /* slightly raised surface */
+  --color-gold: #d4a017; /* burnt gold - primary brand + single accent */
+  --color-gold-bright: #e8b92e; /* hover / highlight gold */
+  --color-cream: #f5ecd7; /* warm cream - primary text */
+  --color-cream-dim: #b9b1a0; /* muted cream - secondary text */
+  --color-espresso: #2c1810; /* dark espresso - secondary surface */
+  --color-espresso-light: #3a2117; /* espresso card surface */
+
+  --font-display: "Anton", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 0.92;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  /* Gold focus ring for keyboard users, consistent across the page. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  /* Anton reads better with a hair of tracking at display sizes. */
+  .tracking-anton {
+    letter-spacing: 0.012em;
+  }
+
+  /* Thin gold rule used as a section marker. */
+  .rule-gold {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--color-gold),
+      color-mix(in srgb, var(--color-gold) 10%, transparent)
+    );
+  }
+}
