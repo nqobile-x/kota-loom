@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 import { List, X } from "@phosphor-icons/react";
-import logoImg from "../images/KOTA_LOOM_logo-removebg-preview.png";
+import NavLogo from "./NavLogo.jsx";
 
 const LINKS = [
   { label: "Menu", href: "#menu" },
@@ -30,15 +30,8 @@ export default function Navbar() {
         }`}
       >
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-[72px]">
-          {/* Wordmark */}
-          <a href="#top" onClick={close} className="flex items-center">
-            <img
-              src={logoImg}
-              alt="Kota Loom"
-              className="h-9 w-auto sm:h-10"
-              loading="eager"
-            />
-          </a>
+          {/* Wordmark (GSAP hover + idle pulse, isolated leaf) */}
+          <NavLogo onClick={close} />
 
           {/* Desktop links */}
           <div className="hidden items-center gap-9 md:flex">
