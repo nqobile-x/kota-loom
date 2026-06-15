@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MapPin, Clock, WhatsappLogo, Phone, CheckCircle } from "@phosphor-icons/react";
 import Reveal from "./Reveal.jsx";
+import packImg from "../images/Kota_loom_packed.jpeg";
 
 // Real, functional contact details for the Hillbrow store.
 const WHATSAPP = "27712345678"; // wa.me format, no +, no spaces
@@ -57,8 +58,19 @@ export default function Visit() {
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-cream/75 sm:text-lg">
             Walk up to the corner or send your order ahead. Either way, it gets
-            built fresh.
+            built fresh and wrapped in the weave.
           </p>
+
+          {/* Branded takeaway packaging -- what your order shows up in. */}
+          <div className="relative mt-8 aspect-[16/10] w-full max-w-md overflow-hidden border border-gold/25">
+            <img
+              src={packImg}
+              alt="A Kota Loom order wrapped in branded takeaway paper"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
+          </div>
 
           <div className="mt-10 space-y-7">
             <div className="flex gap-4">

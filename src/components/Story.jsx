@@ -1,6 +1,6 @@
 import Reveal from "./Reveal.jsx";
 import WovenPattern from "./WovenPattern.jsx";
-import kotaImg from "../images/KOTA KING — Kasi Street Food Poster.png";
+import kotaImg from "../images/handheld_kotaloom.jpeg";
 
 const PILLARS = [
   { k: "Hand-built", v: "Layer by layer, never rushed." },

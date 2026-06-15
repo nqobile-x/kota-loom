@@ -22,13 +22,25 @@ function MenuCard({ item, index }) {
   return (
     <Reveal
       delay={(index % 3) * 0.06}
-      className="group flex h-full flex-col border border-cream/10 bg-espresso/35 p-6 transition-colors duration-300 hover:border-gold/50 sm:p-7"
+      className="group flex h-full flex-col overflow-hidden border border-cream/10 bg-espresso/35 transition-colors duration-300 hover:border-gold/50"
     >
-      {/*
-        TODO (owner): to add real kota photography, drop an <img> here, e.g.
-        <img src={item.image} alt={item.name} className="mb-5 aspect-[4/3] w-full object-cover" />
-        Cards are designed to read well with or without a photo.
-      */}
+      {item.image && (
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
+          <img
+            src={item.image}
+            alt={item.name}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          {/* Espresso fade so the card copy below reads as one piece */}
+          <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/10 to-transparent" />
+          <span className="absolute right-4 top-4 bg-gold px-2.5 py-1 font-display text-2xl leading-none tracking-anton text-ink shadow-lg">
+            R{item.price}
+          </span>
+        </div>
+      )}
+
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
           {item.tag && (
@@ -38,9 +50,11 @@ function MenuCard({ item, index }) {
           )}
           <Heat level={item.heat} />
         </div>
-        <span className="shrink-0 font-display tracking-anton text-3xl leading-none text-gold">
-          R{item.price}
-        </span>
+        {!item.image && (
+          <span className="shrink-0 font-display tracking-anton text-3xl leading-none text-gold">
+            R{item.price}
+          </span>
+        )}
       </div>
 
       <h3 className="mt-5 font-display tracking-anton text-3xl text-cream sm:text-[2rem]">
@@ -58,6 +72,7 @@ function MenuCard({ item, index }) {
           </li>
         ))}
       </ul>
+      </div>
     </Reveal>
   );
 }
@@ -75,8 +90,8 @@ export default function Menu() {
             The Menu
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
-            Six kotas, each one woven to order. Slap chips first, always. Prices
-            in Rand, hunger in layers.
+            Five kotas, each one woven to order. Slap chips first, always.
+            Prices in Rand, hunger in layers.
           </p>
         </Reveal>
 
