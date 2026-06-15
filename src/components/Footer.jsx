@@ -5,6 +5,9 @@ import {
   WhatsappLogo,
 } from "@phosphor-icons/react";
 import WovenPattern from "./WovenPattern.jsx";
+import BrandVideo from "./BrandVideo.jsx";
+import logoMp4 from "../videos/logo-reveal.mp4";
+import logoPoster from "../videos/logo-reveal-poster.jpg";
 
 const NAV = [
   { label: "Menu", href: "#menu" },
@@ -35,11 +38,17 @@ export default function Footer() {
           <div className="md:col-span-6">
             <a
               href="#top"
-              className="font-display tracking-anton text-4xl text-gold transition-colors hover:text-gold-bright sm:text-5xl"
+              aria-label="Kota Loom, back to top"
+              className="inline-block w-44 overflow-hidden sm:w-52"
             >
-              KOTA LOOM
+              <BrandVideo
+                src={logoMp4}
+                poster={logoPoster}
+                alt="Kota Loom"
+                className="w-full"
+              />
             </a>
-            <p className="mt-4 max-w-sm font-body text-lg font-light italic text-cream/80">
+            <p className="mt-2 max-w-sm font-body text-lg font-light italic text-cream/80">
               Woven With Flavour.
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/55">

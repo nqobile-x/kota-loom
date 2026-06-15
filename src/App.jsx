@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import LoomProcess from "./components/LoomProcess.jsx";
 import Menu from "./components/Menu.jsx";
+import FilmBand from "./components/FilmBand.jsx";
 import Story from "./components/Story.jsx";
 import Franchise from "./components/Franchise.jsx";
 import Visit from "./components/Visit.jsx";
@@ -27,6 +28,7 @@ export default function App() {
         <Hero />
         <LoomProcess />
         <Menu />
+        <FilmBand />
         <Story />
         <Franchise />
         <Visit />
