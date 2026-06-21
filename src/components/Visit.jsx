@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MapPin, Clock, WhatsappLogo, Phone, CheckCircle } from "@phosphor-icons/react";
 import Reveal from "./Reveal.jsx";
 
-// Real, functional contact details for the Hillbrow store.
+// Real, functional contact details for the Soweto store.
 const WHATSAPP = "27712345678"; // wa.me format, no +, no spaces
 const PHONE_DISPLAY = "071 234 5678";
 
@@ -68,7 +68,7 @@ export default function Visit() {
                   The Corner
                 </p>
                 <p className="mt-1 text-sm text-cream/70">
-                  Cnr Kotze &amp; Claim Street, Hillbrow, Johannesburg, 2001
+                  Vilakazi Street, Orlando West, Soweto, 1804
                 </p>
               </div>
             </div>
