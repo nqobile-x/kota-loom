@@ -1,7 +1,7 @@
 # KOTA LOOM
 
 > Woven With Flavour. The marketing site for KOTA LOOM, a kasi street-food brand
-> from Hillbrow, Johannesburg.
+> from Soweto, Johannesburg.
 
 A single-page React site: hero, the loom process, menu, story, franchise pitch,
 and a WhatsApp order flow.

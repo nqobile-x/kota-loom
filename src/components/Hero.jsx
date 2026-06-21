@@ -78,7 +78,7 @@ export default function Hero() {
             variants={item}
             className="mt-7 max-w-xl text-lg leading-relaxed text-cream/85 sm:text-xl"
           >
-            Hand-built kotas. Layer by layer. Born in Hillbrow, Joburg.
+            Hand-built kotas. Layer by layer. Born in Soweto, Joburg.
           </motion.p>
 
           <motion.div

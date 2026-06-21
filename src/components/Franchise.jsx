@@ -41,7 +41,7 @@ export default function Franchise() {
               Built For <span className="text-gold">The World</span>
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
-              We started on a Hillbrow corner with one quarter loaf and a method.
+              We started on a Soweto corner with one quarter loaf and a method.
               The method travels. If you want to bring the loom to your city, we
               are ready to build with you.
             </p>

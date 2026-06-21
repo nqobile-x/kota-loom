@@ -27,7 +27,7 @@ export default function Story() {
             Everything is intentional.
           </p>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-cream/70">
-            Born on the street. Built for the world. We started on a Hillbrow
+            Born on the street. Built for the world. We started on a Soweto
             corner with one quarter loaf and a method we refused to compromise.
             The corner grew. The method stayed.
           </p>

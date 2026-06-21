@@ -80,9 +80,9 @@ export default function Footer() {
               Find Us
             </p>
             <p className="mt-4 text-sm leading-relaxed text-cream/70">
-              Cnr Kotze &amp; Claim Street,
+              Vilakazi Street, Orlando West,
               <br />
-              Hillbrow, Johannesburg
+              Soweto, Johannesburg
             </p>
             <div className="mt-5 flex gap-3">
               {SOCIALS.map(({ label, href, Icon }) => (
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-cream/10 pt-6 text-xs text-cream/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Kota Loom. Woven with flavour in Hillbrow, Johannesburg.</p>
+          <p>© 2026 Kota Loom. Woven with flavour in Soweto, Johannesburg.</p>
           <p>Proudly kasi. Franchise-ready.</p>
         </div>
       </div>
